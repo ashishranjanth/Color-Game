@@ -3,12 +3,27 @@ var colors = [];
 var squares = document.querySelectorAll(".square");
 var resetBtn= document.querySelectorAll("#reset")[0];
 var msg = document.querySelectorAll("#msg")[0]
+var hardBtn = document.querySelectorAll("#hardBtn")[0];
+var easyBtn = document.querySelectorAll("#easyBtn")[0];
 var picked;
 
+easyBtn.addEventListener(("click"),function(){
+	document.querySelectorAll("#msg")[0].textContent="";
+	randCol(3);
+	disableRest();
+});
+
+hardBtn.addEventListener(("click"),function(){
+	document.querySelectorAll("#msg")[0].textContent="";
+	randCol(3);
+	disableRest();
+});
 if(hardmode){
+	showAll();
 	randCol(6);
 }
 resetBtn.addEventListener("click",function(){
+	showAll();
 	this.textContent="NEW COLORS";
 	randCol(6);
 	document.querySelectorAll("#msg")[0].textContent="";
@@ -24,6 +39,7 @@ for(let i=0;i<colors.length;i++){
 			msg.textContent="Correct!";
 		}
 		else{
+			this.style.backgroundColor="black";
 			msg.textContent="Try Again";
 		}
 	});
@@ -42,4 +58,16 @@ function randCol(num){
 function pick(){
 	picked=colors[Math.floor(Math.random()*colors.length)];
 	document.querySelectorAll("#goal")[0].textContent=picked;
+}
+function disableRest(){
+	for(let i=colors.length;i<squares.length;i++){
+		if(squares[i]){
+			squares[i].style.display="none";
+		}
+	}
+}
+function showAll(){
+	for(let i=0;i<squares.length;i++){
+		squares[i].style.display="block";
+	}
 }
