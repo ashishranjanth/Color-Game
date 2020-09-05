@@ -1,0 +1,30 @@
+h1{
+	text-align: center;
+	color: white;
+}
+.square{
+	width:30%;
+	margin:1.66%;
+	padding-bottom:30%;
+	background: black;
+	float: left;
+	border-radius:15%;
+}
+#container{
+max-width: 600px;
+margin:0 auto;
+}
+#strip{
+	text-align: center;
+}
+.selected{
+	background:blue;
+}
+body{
+	background:black;
+}
+#msg{
+	width: 20%;
+	display: inline-block;
+	color:white;
+}
