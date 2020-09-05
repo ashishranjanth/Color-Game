@@ -1,12 +1,14 @@
 var hardmode= true;
 var colors = [];
 var squares = document.querySelectorAll(".square");
+var resetBtn= document.querySelectorAll("#reset")[0];
+var msg = document.querySelectorAll("#msg")[0]
 var picked;
 
 if(hardmode){
 	randCol(6);
 }
-document.querySelectorAll("#reset")[0].addEventListener("click",function(){
+resetBtn.addEventListener("click",function(){
 	this.textContent="NEW COLORS";
 	randCol(6);
 	document.querySelectorAll("#msg")[0].textContent="";
@@ -15,14 +17,14 @@ document.querySelectorAll("#reset")[0].addEventListener("click",function(){
 for(let i=0;i<colors.length;i++){
 	squares[i].addEventListener("click",function(){
 		if(this.style.backgroundColor===picked){
-			document.querySelectorAll("#reset")[0].textContent="PLAY AGAIN?";
+			resetBtn.textContent="PLAY AGAIN?";
 			for(let j=0;j<colors.length;j++){
 				squares[j].style.backgroundColor=picked;
 			}
-			document.querySelectorAll("#msg")[0].textContent="Correct!";
+			msg.textContent="Correct!";
 		}
 		else{
-			document.querySelectorAll("#msg")[0].textContent="Try Again";
+			msg.textContent="Try Again";
 		}
 	});
 }
