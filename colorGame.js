@@ -14,9 +14,9 @@ easyBtn.addEventListener(("click"),function(){
 });
 
 hardBtn.addEventListener(("click"),function(){
+	showAll();
 	document.querySelectorAll("#msg")[0].textContent="";
-	randCol(3);
-	disableRest();
+	randCol(6);
 });
 if(hardmode){
 	showAll();
