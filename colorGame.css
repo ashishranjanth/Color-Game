@@ -3,6 +3,7 @@ h1{
 	color: white;
 }
 .square{
+	transition:background 0.3s;
 	width:30%;
 	margin:1.66%;
 	padding-bottom:30%;
@@ -18,7 +19,7 @@ margin:0 auto;
 	text-align: center;
 }
 .selected{
-	background:blue;
+	background:steelblue;
 }
 body{
 	background:black;
@@ -27,4 +28,8 @@ body{
 	width: 20%;
 	display: inline-block;
 	color:white;
+}
+button:hover {
+	transition-duration: 0.4s;
+	background:steelblue;
 }
