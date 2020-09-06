@@ -31,7 +31,7 @@ margin:0 auto;
 body{
 	background:black;
 	margin: 0;
-	/*font-family: "Montserrat", "Avenir";*/
+	font-family: "Montserrat", "Avenir";
 }
 #msg{
 	width: 20%;
