@@ -30,8 +30,8 @@ margin:0 auto;
 }
 body{
 	background:black;
+	font-family: "Montserrat", "Avenir";
 	margin: 0;
-	/*font-family: "Montserrat", "Avenir";*/
 }
 #msg{
 	width: 20%;
@@ -41,7 +41,7 @@ body{
 button{
 	height:100%;
 	border:none;
-	padding-top:2px;
+	font-size: inherit;
 	color:steelblue;
 	background:white;
 	outline: none;
