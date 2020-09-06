@@ -18,6 +18,7 @@ function init(){
 
 function setupBtn(){
 easyBtn.addEventListener(("click"),function(){
+	document.querySelectorAll("h1")[0].style.backgroundColor="steelblue";
 	easyBtn.classList.add("selected");
 	hardBtn.classList.remove("selected");
 	document.querySelectorAll("#msg")[0].textContent="";
@@ -26,6 +27,7 @@ easyBtn.addEventListener(("click"),function(){
 });
 
 hardBtn.addEventListener(("click"),function(){
+	document.querySelectorAll("h1")[0].style.backgroundColor="steelblue";
 	easyBtn.classList.remove("selected");
 	hardBtn.classList.add("selected");
 	showAll();
@@ -34,6 +36,7 @@ hardBtn.addEventListener(("click"),function(){
 });	
 
 resetBtn.addEventListener("click",function(){
+	document.querySelectorAll("h1")[0].style.backgroundColor="steelblue";
 	easyBtn.classList.remove("selected");
 	hardBtn.classList.add("selected");
 	showAll();
@@ -47,6 +50,7 @@ function setupSquare(){
 for(let i=0;i<colors.length;i++){
 	squares[i].addEventListener("click",function(){
 		if(this.style.backgroundColor===picked){
+			document.querySelectorAll("h1")[0].style.backgroundColor=picked;
 			resetBtn.textContent="PLAY AGAIN?";
 			for(let j=0;j<colors.length;j++){
 				squares[j].style.backgroundColor=picked;
